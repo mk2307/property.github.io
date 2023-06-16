@@ -1,0 +1,705 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+ *{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+ }
+
+
+ body {
+    
+    color: #ededed;
+    text-shadow: black;
+ }
+
+ .header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    padding: 20px 15%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: .3s;
+ }
+
+ .body , .html {
+
+    overflow-x: hidden;
+
+ }
+
+.header .sticky {
+
+    background: yellowgreen;
+}
+
+ .logo{
+
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-shadow: black;
+    text-decoration: none;
+    font-weight: 600;
+
+
+
+}
+
+
+
+.navbar a{
+
+    font-size: 18px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+
+.navbar a:hover, .navbar a.active{
+
+    color: yellow;
+}
+
+#menu-icon{
+
+    font-size: 36px;
+    color: #ededed;
+    cursor: pointer;
+    display: none;
+
+}
+
+section{
+
+    min-height: 100vh;
+    padding: 20px 15%;
+    
+
+}
+
+
+.home{
+
+   height: 100vh;
+   background: url('./img/tlo.jpg') no-repeat;
+   background-size: cover;
+   background-position: center;
+
+   display:flex;
+   align-items: center; 
+   padding: 0 15%;
+   
+}
+
+.home-content {
+
+   
+    max-width: 600px;
+   
+
+}
+
+.home-content h1 {
+
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.home-content p {
+
+font-size: 20px;
+margin: 20px 0 40px;
+
+}
+
+.home-content .btn-box {
+
+    display: flex;
+    justify-content: space-between;
+    width: 490px;
+    height: 50px;
+    
+}
+.btn-box a {
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border:  2px solid #6c86a1;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+    
+}
+
+.btn-box a:nth-child(1) {
+    
+    background: transparent;
+    color: #ededed;
+}
+
+.btn-box a:nth-child(2) {
+    
+    background: transparent;
+    color: #ededed;
+}
+
+.btn-box a:nth-child(3) {
+    
+    background: transparent;
+    color: #ededed;
+}
+            .btn-box a:nth-child(1)::before{
+    
+                background: #6c86a1;
+                
+}
+
+            .btn-box a:nth-child(2)::before {
+    
+                background: #6c86a1;
+                
+}
+
+            .btn-box a:nth-child(3)::before {
+    
+                background: #6c86a1; }
+                
+                .btn-box a:nth-child(1):hover{
+    
+                    color: yellow;
+                    
+    }
+    
+                .btn-box a:nth-child(2):hover {
+        
+                    color: yellow;
+                    
+    }
+    
+                .btn-box a:nth-child(3):hover {
+        
+                    color: yellow;
+}
+.btn-box a::before{
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn-box a:hover::before {
+
+    width: 100%;
+
+}
+
+.home-sci {
+
+    position: absolute;
+    bottom:40px;
+    width:170px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.home-sci a {
+
+position: relative;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+width: 40px;
+height: 40px;
+background: transparent;
+border: 2px solid #6c86a1;
+border-radius: 50%;
+font-size: 20px;
+color: white;
+text-decoration: none;
+z-index: 1;
+overflow: hidden;
+transition: .4s;
+
+
+
+
+}
+
+.home-sci a:hover {
+
+color: yellow;
+
+}
+
+
+.home-sci a::before {
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #6c86a1;
+    z-index: -1;
+    transition: .4s;
+
+
+
+
+}
+
+
+
+.home-sci a:hover:before {
+
+    
+    width: 100%;
+    
+
+
+}
+.events{
+    
+
+   height: 100vh;
+    background: linear-gradient(#262423 16%,black 86%);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    display:flex;
+    align-items: center; 
+    
+    padding: 0 13%;
+ }
+
+.title {
+
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+
+}
+
+
+
+.raw , .row {
+
+display: flex;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+
+
+}
+    
+
+   
+
+.row , .raw , .col img {
+
+width: 95%;
+border-radius: 8px;
+
+}
+
+
+
+
+
+.about{
+
+    height: 100vh;
+    background: url('img/tlo2.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    display:flex;
+    align-items: center; 
+    
+    padding-bottom: 60px;
+    
+ }
+
+ .heading{
+
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-align: justify;
+
+ }
+
+.aboutimg{
+
+        position: relative;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+}
+
+.aboutimg img {
+
+    width:70%;
+    border-radius: 50%;
+    border: .2rem solid #6c86a1;
+}
+
+
+
+.aboutcontent {
+
+text-align: center;
+
+
+}
+.aboutcontent h3 {
+
+font-size: 26px;
+
+}
+
+.aboutcontent p {
+
+    font-size: 20px;
+    margin: 20px 0 40px;
+
+}
+
+
+.btnboxbtns a {
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: transparent;
+    border:  2px solid #6c86a1;
+    border-radius: 8px;
+    font-size: 19px;
+    color:#ededed;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .2s;
+} 
+
+.btnboxbtns a:nth-child(1) {
+    
+    background: transparent;
+    color: #ededed;
+}
+
+.btnboxbtns a:nth-child(1)::before{
+    
+    background: #6c86a1;
+}
+
+
+.btnboxbtns a:nth-child(1):hover{
+    
+    color: yellow;}
+
+
+.btnboxbtns a::before{
+
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: transparent;
+        z-index: -1;
+        transition: .4s;
+    }
+    
+    .btnboxbtns a:hover::before {
+    
+        width: 100%;
+    
+    }
+
+    
+    
+
+
+.kontakt{
+
+        height: 100vh;
+        background: linear-gradient(black 16%, #262423 86%);               
+        background-position: center;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        display:flex;
+        align-items: center; 
+        
+        padding-bottom: 60px;
+        
+     }
+
+/*#262423*/
+
+
+
+.btn {
+
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 100%;
+        background: transparent;
+        border:  2px solid #6c86a1;
+        border-radius: 8px;
+        font-size: 19px;
+        color:#ededed;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: .2s;
+
+
+
+
+    }
+
+
+
+.kontakt {
+
+        min-height: auto;
+        padding-bottom: 70px;
+    
+    }
+
+
+.kontakt form {
+
+        max-width: 700px;
+        margin: 0 auto;
+        text-align: center;
+
+
+    }
+
+.kontakt form .input-box {
+
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+    }
+
+
+.kontakt form .input-box .input-field {
+
+        position: relative;
+        width: 49%;
+        margin: .8rem 0;
+
+
+
+    }
+
+
+.kontakt form .input-box .input-field input, 
+.kontakt form .textarea-field textarea {
+
+        width: 100%;
+        height: 100%;
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        color: #ededed;
+        background: transparent;
+        border-radius: .6rem;
+        border: .2rem solid #5C728A;
+
+
+
+    }
+
+
+.kontakt form .input-box .input-field input::placeholder 
+.kontakt form .textarea-field textarea::placeholder {
+
+        color:#5C728A;
+    }
+
+.kontakt form .textarea-field {
+
+        position: relative;
+        margin: .5rem 0 2rem;
+        display: flex;
+
+
+    }
+
+.kontakt form .textarea-field textarea {
+
+        resize: none;
+
+    }
+
+.kontakt form .btnboxbtns .btn {
+
+            cursor: pointer;
+        }
+
+
+
+
+.footer{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 9%;
+    background: #6c86a1;
+    
+}
+
+.footer-text p {
+    color: black;
+    font-size: 1.6rem;
+
+}
+
+.private a{
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    color: black;;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    
+
+
+
+
+}
+.info p {
+    color:black;
+    margin: 20px 0 40px;
+    
+}
+
+/* sprzedaj */
+
+
+.sell {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#3F4E5E 30%,black 70%);
+    gap: 2rem;
+    padding-left: 0%;
+    padding-bottom: 0%;
+    padding-top: 0%;
+    padding-right: 7%;
+}
+
+.sell-img img{
+
+    width:59vw;
+
+}
+
+.heading {
+
+    text-align: center;
+    font-size: 40px;
+
+}
+
+
+
+.sell-content h2 {
+
+    text-align: left;
+    line-height: 1.2;
+
+}
+
+.sell-content p {
+
+    font-size: 1.3rem;
+    margin: 2rem 0 3rem;
+
+
+}
+
+.btnb {
+
+
+    position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 250px;
+        height: 100%;
+        background: transparent;
+        border:  2px solid #6c86a1;
+        border-radius: 8px;
+        font-size: 19px;
+        color:#ededed;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 1px;
+        z-index: 1;
+        overflow: hidden;
+        transition: .2s;;
+}
