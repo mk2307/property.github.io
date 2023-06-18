@@ -1,0 +1,25 @@
+.events {
+  height: 100vh;
+  background: linear-gradient(#262423 16%, black 86%);
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0 3%;
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .tiles {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column: span 2 / span 2;
+    gap: 0.75rem;
+  }
+}

@@ -1,14 +1,16 @@
 "use client";
 import { useState } from "react";
+import styles from "./Header.module.scss";
+import classNames from "classnames";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <header className="top-0 left-0 fixed pl-4 pr-4 pt-2 bg-transparent flex flex-col z-30 w-screen">
+    <header className={styles.header}>
       <div className="flex items-center justify-between">
         <a
-          href="index.html"
-          className="relative text-2xl text-[#ededed] font-semibold"
+          href="/"
+          className={styles.logo}
         >
           HOME PLUS
         </a>
@@ -16,20 +18,24 @@ export const Header = () => {
           onClick={() => {
             setIsMenuOpen(!isMenuOpen);
           }}
-          className="w-3 h-3"
+          className={styles.menuIcon}
         >
           <i
             className={`bx ${isMenuOpen ? "bx-x" : "bx-menu"}`}
-            id="close-icon"
+            id="menu-icon"
           ></i>
         </button>
       </div>
-      <nav className={`flex flex-col items-end ${isMenuOpen ? "" : " hidden"}`}>
+      <nav className={classNames(styles.navbar,{
+        [styles.navbarOpen]: isMenuOpen,
+      })} onClick={()=> {
+        setIsMenuOpen(false);
+      }} >
         <a href="#kup">KUP</a>
         <a href="sprzedaj.html">SPRZEDAJ</a>
         <a href="#WYNAJMIJ">WYNAJMIJ</a>
         <a href="#NIERUCHOMOŚCI">NIERUCHOMOŚCI</a>
-        <a href="kontakt.html">KONTAKT</a>
+        <a href="#kontakt">KONTAKT</a>
       </nav>
     </header>
   );

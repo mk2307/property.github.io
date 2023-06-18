@@ -1,23 +1,25 @@
 import React from "react";
+import styles from "./Hero.module.scss";
+import classNames from "classnames";
 
 export const Hero = () => {
-    return <section className="bg-cover bg-center flex items-center w-full bg-hero-pattern bg-no-repeat h-screen p-4" id="home">
-        <div>
-            <h1 className="text-center font-bold text-5xl">Witaj w naszym biurze</h1>
+    return <section className={styles.home} id="home">
+        <div className={styles.homeContent}>
+            <h1>Witaj w naszym biurze</h1>
 
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsum, rem ad sequi ab accusantium neque
                 nemo animi hic voluptate reprehenderit earum recusandae quos officiis dolorem nostrum quidem illo quia.
             </p>
 
-            <div className="btn-box flex flex-col gap-2 text-base items-center">
+            <div className={classNames("btn-box ", styles.homeNav)}>
                 <a href="#">KUP</a>
                 <a href="sprzedaj.html">SPRZEDAJ</a>
                 <a href="#">WYNAJMIJ</a>
             </div>
         </div>
 
-        <div className="home-sci">
+        <div className={styles.homeSci}>
             <a href="#">
                 <i className="bx bxl-instagram"></i>
             </a>

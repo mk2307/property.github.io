@@ -366,27 +366,6 @@ body {
   padding-bottom: 60px;
 }
 
-/*#262423*/
-
-.btn {
-  position: relative;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  width: 150px;
-  height: 100%;
-  background: transparent;
-  border: 2px solid #6c86a1;
-  border-radius: 8px;
-  font-size: 19px;
-  color: #ededed;
-  text-decoration: none;
-  font-weight: 600;
-  letter-spacing: 1px;
-  z-index: 1;
-  overflow: hidden;
-  transition: 0.2s;
-}
 
 .kontakt {
   min-height: auto;
@@ -449,6 +428,30 @@ body {
 .kontakt form .btnboxbtns .btn {
   cursor: pointer;
 }
+
+/*#262423*/
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 100%;
+  background: transparent;
+  border: 2px solid #6c86a1;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+
 
 .footer {
   display: flex;
