@@ -9,12 +9,24 @@ export const Events = () => {
         <div className="line"></div>
       </div>
       <div className={styles.tiles}>
-        <img src="img/sprzedazedit.jpg" alt="sprzedaz" />
-        <img src="img/zakupedit.jpg" alt="zakup" />
-        <img src="img/wynajemedit.jpg" alt="wynajem" />
-        <img src="img/wycenaedit.jpg" alt="wycena" />
-        <img src="img/finansowanieedit.jpg" alt="finansowanie" />
-        <img src="img/zarzadanieedit.jpg" alt="zarzadzanie" />
+        <li>
+          <img src="img/sprzedazedit.jpg" alt="sprzedaz" />
+        </li>
+        <li>
+          <img src="img/zakupedit.jpg" alt="zakup" />
+        </li>
+        <li>
+          <img src="img/wynajemedit.jpg" alt="wynajem" />
+        </li>
+        <li>
+          <img src="img/wycenaedit.jpg" alt="wycena" />
+        </li>
+        <li>
+          <img src="img/finansowanieedit.jpg" alt="finansowanie" />
+        </li>
+        <li>
+          <img src="img/zarzadanieedit.jpg" alt="zarzadzanie" />
+        </li>
       </div>
     </section>
   );
