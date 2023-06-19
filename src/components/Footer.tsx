@@ -1,26 +1,21 @@
 import React from "react";
+import styles from "./Footer.module.scss";
 
 export const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-text">
-        <br />
+    <footer className={styles.footer}>
+      <div className={styles.footerText}>
         <p>
           <strong>Skontaktuj się z nami:</strong>
         </p>
-        <br />
         <p>333 444 555</p>
-        <br />
         <p>homeplus@gmail.com</p>
       </div>
 
-      <div className="private">
-        <br />
-        <br />
-        <br />
+      <div className={styles.private}>
         <a href="#">Polityka prywatności</a>
       </div>
-      <div className="info">
+      <div className={styles.info}>
         <p>
           <br />
           Co znajdziesz na tej stronie:

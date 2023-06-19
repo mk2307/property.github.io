@@ -1,0 +1,29 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 9%;
+  background: #6c86a1;
+}
+
+.footerText p {
+  color: black;
+  font-size: 1.6rem;
+}
+
+.private a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 19px;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.info p {
+  color: black;
+  margin: 20px 0 40px;
+}

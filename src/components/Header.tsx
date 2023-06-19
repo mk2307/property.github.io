@@ -31,10 +31,10 @@ export const Header = () => {
       })} onClick={()=> {
         setIsMenuOpen(false);
       }} >
-        <a href="#kup">KUP</a>
-        <a href="sprzedaj.html">SPRZEDAJ</a>
-        <a href="#WYNAJMIJ">WYNAJMIJ</a>
-        <a href="#NIERUCHOMOŚCI">NIERUCHOMOŚCI</a>
+        <a href="/kup">KUP</a>
+        <a href="/sprzedaj">SPRZEDAJ</a>
+        <a href="/wynajmij">WYNAJMIJ</a>
+        {/* <a href="#NIERUCHOMOŚCI">NIERUCHOMOŚCI</a> */}
         <a href="#kontakt">KONTAKT</a>
       </nav>
     </header>
