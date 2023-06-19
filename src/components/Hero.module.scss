@@ -1,0 +1,111 @@
+.home {
+  align-items: center;
+  background: url("/img/tlo.jpg") no-repeat;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  padding: 1rem;
+  width: 100%;
+
+  .homeContent {
+    margin-top: 5rem;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+      margin: 20px 0 40px;
+    }
+
+    .btn-box {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .homeNav {
+    //             <div className="btn-box flex flex-col gap-2 text-base items-center">
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 100%;
+      background: transparent;
+      border: 2px solid #6c86a1;
+      border-radius: 8px;
+      font-size: 19px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 1px;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.2s;
+    }
+  }
+
+  .homeSci {
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background: transparent;
+      border: 2px solid #6c86a1;
+      border-radius: 50%;
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      z-index: 1;
+      overflow: hidden;
+      transition: 0.4s;
+
+      &:hover {
+        color: yellow;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #6c86a1;
+        z-index: -1;
+        transition: 0.4s;
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+    }
+  }
+}
