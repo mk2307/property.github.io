@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 30;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  background-color: transparent;
+  flex-direction: column;
+  width: 100vw;
+
+  .logo {
+    position: relative;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: #ededed;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: end;
+    margin-top: 1rem;
+    background-color: black;
+    a {
+      font-size: 18px;
+      color: #ededed;
+      text-decoration: none;
+      font-weight: 500;
+      width: 100%;
+      text-align: end;
+      margin-left: 35px;
+      transition: 0.3s;
+      padding: 1rem;
+    }
+    a:hover,
+    a.active {
+      color: yellow;
+      background-color: #6c86a1;
+    }
+  }
+
+  .navbarOpen {
+    display: flex;
+  }
+
+  .menuIcon {
+    font-size: 32px;
+    color: #ededed;
+    cursor: pointer;
+  }
+}
