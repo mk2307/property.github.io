@@ -1,5 +1,6 @@
 .events {
   height: 100vh;
+  width: 100vw;
   background: linear-gradient(#262423 16%, black 86%);
   background-size: cover;
   background-position: center;
@@ -33,6 +34,17 @@
       height: auto;
       vertical-align: middle;
       border-radius: 5px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: unset;
+    padding-top: 2rem;
+    .tiles {
+      max-width: 950px;
+      & > li {
+        flex-basis: 300px;
+      }
     }
   }
 }

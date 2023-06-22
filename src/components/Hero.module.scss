@@ -1,5 +1,6 @@
 .home {
   align-items: center;
+  text-align: center;
   background: url("/img/tlo.jpg") no-repeat;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,7 +37,6 @@
   }
 
   .homeNav {
-    //             <div className="btn-box flex flex-col gap-2 text-base items-center">
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -63,8 +63,16 @@
     }
   }
 
+  @media screen and (min-width: 768px) {
+    height: 500px;
+
+    .homeNav {
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
   .homeSci {
-    position: absolute;
     bottom: 40px;
     width: 170px;
     display: flex;
