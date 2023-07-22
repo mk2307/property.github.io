@@ -9,7 +9,7 @@ module.exports = {
     screens: {
       desktop: "1024px",
       tablet: "768px",
-      phone: "640px",
+      phone: "340px",
     },
     extend: {
       backgroundImage: {

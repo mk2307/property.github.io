@@ -17,7 +17,7 @@ export const Hero = () => {
 
         <div className={classNames("btn-box ", styles.homeNav)}>
           <a href={links.buy} target="_blank">{dictionary["menu.buy"]}</a>
-          <a href={links.sell} target="_blank">{dictionary["menu.sell"]}</a>
+          {/* <a href={links.sell}>{dictionary["menu.sell"]}</a> */}
           <a href={links.rent} target="_blank">{dictionary["menu.rent"]}</a>
         </div>
       </div>
