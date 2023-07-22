@@ -6,6 +6,11 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      desktop: "1024px",
+      tablet: "768px",
+      phone: "340px",
+    },
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/img/tlo.jpg')",

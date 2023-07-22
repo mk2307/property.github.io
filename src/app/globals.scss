@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 :root {
+  --color-white: #ededed;
+  --color-black: #000;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-grad-start: #262423;
+  --background-grad-end: #000000;
+  --background-grad: linear-gradient(var(--background-grad-start) 16%, var(--background-grad-end) 86%);
+  --background-grad-reverse: linear-gradient(var(--background-grad-end) 16%, var(--background-grad-start) 86%);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,7 +1,7 @@
 .kontakt {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(black 16%, #262423 86%);
+  background: var(--background-grad-reverse);
   background-position: center;
   flex-direction: column;
   gap: 20px;
@@ -23,6 +23,7 @@
     text-align: center;
     display: grid;
     gap: 1rem;
+    max-width: 600px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 3fr 1fr;
 
@@ -30,7 +31,7 @@
       width: 100%;
       height: 100%;
       padding: 1rem;
-      color: #ededed;
+      color: var(--color-white);
       background: transparent;
       border-radius: 0.6rem;
       border: 0.2rem solid #5c728a;
@@ -67,12 +68,17 @@
       border: 2px solid #6c86a1;
       border-radius: 8px;
       font-size: 19px;
-      color: #ededed;
+      color: var(--color-white);
       text-decoration: none;
       font-weight: 600;
       letter-spacing: 1px;
       transition: 0.2s;
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: unset;
+    padding-top: 2rem;
   }
 
 }

@@ -1,13 +1,14 @@
 import { Header } from "@/components/Header";
-import "./globals.css";
+import "./globals.scss";
 import { Inter } from "next/font/google";
 import { Footer } from "@/components/Footer";
+import dictionary from "@/i18n/dictionary.json";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Home plus",
-  description: "Najlepsze biuro nieruchomości w Polsce",
+  title: dictionary["metadata.title"],
+  description: dictionary["metadata.description"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

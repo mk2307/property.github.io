@@ -1,5 +1,6 @@
 .home {
   align-items: center;
+  text-align: center;
   background: url("/img/tlo.jpg") no-repeat;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,11 +22,16 @@
       font-size: 50px;
       font-weight: 700;
       line-height: 1.2;
+      text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
+      color: #ededed;
       text-align: center;
     }
 
     p {
       font-size: 20px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-shadow: 3px 2px 2px rgba(0, 0, 0, 0.5);
       margin: 20px 0 40px;
     }
 
@@ -36,7 +42,6 @@
   }
 
   .homeNav {
-    //             <div className="btn-box flex flex-col gap-2 text-base items-center">
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -49,7 +54,8 @@
       align-items: center;
       width: 150px;
       height: 100%;
-      background: transparent;
+      text-transform: uppercase;
+      background: rgba(0, 0, 0, 0.4);
       border: 2px solid #6c86a1;
       border-radius: 8px;
       font-size: 19px;
@@ -60,11 +66,35 @@
       z-index: 1;
       overflow: hidden;
       transition: 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 650px;
+
+    .homeNav {
+      flex-direction: row;
+      justify-content: center;
+
+      a {
+        width: 200px;
+        height: 80px;
+      }
+    }
+
+    .homeContent {
+      width: 80vh;
+      margin-top: auto;
+      margin-bottom: auto;
     }
   }
 
   .homeSci {
-    position: absolute;
     bottom: 40px;
     width: 170px;
     display: flex;
