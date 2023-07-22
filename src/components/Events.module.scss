@@ -1,7 +1,7 @@
 .events {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(#262423 16%, black 86%);
+  background: var(--background-grad);
   background-size: cover;
   background-position: center;
   flex-direction: column;
@@ -41,6 +41,7 @@
   @media screen and (min-width: 768px) {
     height: unset;
     padding-top: 2rem;
+    padding-bottom: 10rem;
     .tiles {
       max-width: 950px;
       & > li {

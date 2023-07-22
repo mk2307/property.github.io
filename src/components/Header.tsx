@@ -2,16 +2,20 @@
 import { useEffect, useState } from "react";
 import styles from "./Header.module.scss";
 import classNames from "classnames";
+import dictionary from "@/i18n/dictionary.json";
+import config from "@/config.json";
+
+const { links } = config;
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-      setNavbar(window.scrollY >= 66);
+    setNavbar(window.scrollY >= 66);
   };
 
-  useEffect(() => {    
+  useEffect(() => {
     changeBackground();
     // adding the event when scroll change background
     window.addEventListener("scroll", changeBackground);
@@ -19,14 +23,13 @@ export const Header = () => {
 
   return (
     <header
-      className={
-        classNames(styles.header, {
-          [styles.headerScroll]: navbar,
-        })}
+      className={classNames(styles.header, {
+        [styles.headerScroll]: navbar,
+      })}
     >
       <div className="flex items-center justify-between">
         <a href="/" className={styles.logo}>
-          HOME PLUS
+          {dictionary["metadata.title"]}
         </a>
         <button
           onClick={() => {
@@ -34,7 +37,7 @@ export const Header = () => {
           }}
           className={styles.menuIcon}
         >
-          <i className={`bx ${isMenuOpen ? "bx-x" : "bx-menu"}`} id="menu-icon"></i>
+          <i className={classNames("bx", { "bx-x": isMenuOpen, "bx-menu": !isMenuOpen })} id="menu-icon"></i>
         </button>
       </div>
       <nav
@@ -45,11 +48,11 @@ export const Header = () => {
           setIsMenuOpen(false);
         }}
       >
-        <a href="/kup">KUP</a>
-        <a href="/sprzedaj">SPRZEDAJ</a>
-        <a href="/wynajmij">WYNAJMIJ</a>
+        <a href={links.buy}>{dictionary["menu.buy"]}</a>
+        {/* <a href="/sprzedaj">SPRZEDAJ</a> */}
+        <a href={links.rent}>{dictionary["menu.rent"]}</a>
         {/* <a href="#NIERUCHOMOŚCI">NIERUCHOMOŚCI</a> */}
-        <a href="#kontakt">KONTAKT</a>
+        <a href="#kontakt">{dictionary["contactUs.contact"]}</a>
       </nav>
     </header>
   );

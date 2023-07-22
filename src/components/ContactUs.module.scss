@@ -1,7 +1,7 @@
 .kontakt {
   height: 100vh;
   width: 100vw;
-  background: linear-gradient(black 16%, #262423 86%);
+  background: var(--background-grad-reverse);
   background-position: center;
   flex-direction: column;
   gap: 20px;
@@ -31,7 +31,7 @@
       width: 100%;
       height: 100%;
       padding: 1rem;
-      color: #ededed;
+      color: var(--color-white);
       background: transparent;
       border-radius: 0.6rem;
       border: 0.2rem solid #5c728a;
@@ -68,7 +68,7 @@
       border: 2px solid #6c86a1;
       border-radius: 8px;
       font-size: 19px;
-      color: #ededed;
+      color: var(--color-white);
       text-decoration: none;
       font-weight: 600;
       letter-spacing: 1px;

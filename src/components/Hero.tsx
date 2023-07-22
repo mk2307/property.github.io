@@ -1,34 +1,38 @@
 import React from "react";
 import styles from "./Hero.module.scss";
 import classNames from "classnames";
+import config from "@/config.json";
+import dictionary from "@/i18n/dictionary.json";
+
+
+const { links } = config;
 
 export const Hero = () => {
-    return <section className={styles.home} id="home">
-        <div className={styles.homeContent}>
-            <h1>Witaj w naszym biurze</h1>
+  return (
+    <section className={styles.home} id="home">
+      <div className={styles.homeContent}>
+        <h1>{dictionary["hero.welcome"]}</h1>
 
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsum, rem ad sequi ab accusantium neque
-                nemo animi hic voluptate reprehenderit earum recusandae quos officiis dolorem nostrum quidem illo quia.
-            </p>
+        <p>{dictionary["hero.description"]}</p>
 
-            <div className={classNames("btn-box ", styles.homeNav)}>
-                <a href="#">KUP</a>
-                <a href="sprzedaj.html">SPRZEDAJ</a>
-                <a href="#">WYNAJMIJ</a>
-            </div>
+        <div className={classNames("btn-box ", styles.homeNav)}>
+          <a href={links.buy} target="_blank">{dictionary["menu.buy"]}</a>
+          <a href={links.sell} target="_blank">{dictionary["menu.sell"]}</a>
+          <a href={links.rent} target="_blank">{dictionary["menu.rent"]}</a>
         </div>
+      </div>
 
-        <div className={styles.homeSci}>
-            <a href="#">
-                <i className="bx bxl-instagram"></i>
-            </a>
-            <a href="#">
-                <i className="bx bxl-tiktok"></i>
-            </a>
-            <a href="#">
-                <i className="bx bxl-facebook"></i>
-            </a>
-        </div>
+      <div className={styles.homeSci}>
+        <a href={links.instagram}>
+          <i className="bx bxl-instagram" />
+        </a>
+        <a href={links.tiktok}>
+          <i className="bx bxl-tiktok" />
+        </a>
+        <a href={links.facebook}>
+          <i className="bx bxl-facebook" />
+        </a>
+      </div>
     </section>
-}
+  );
+};
